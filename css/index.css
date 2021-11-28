@@ -1,0 +1,157 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    user-select: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    overflow-y: scroll;
+    user-select: none;
+    background-color: #222;
+    color: white;
+    z-index: 9;
+}
+
+nav::-webkit-scrollbar{
+    display: none;
+}
+
+nav .nav-items{
+    text-align: center;
+    padding: 36px;
+}
+
+nav .nav-items i{
+    font-size: 32px;
+}
+
+#main{
+    position: relative;
+    margin-left: 150px;
+    width: calc(100vw - 150px);
+}
+
+#img-container{
+    background-color: black;
+    position: relative;
+}
+
+#caption{
+    position: absolute;
+    color: white;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#caption h1{
+    font-size: 64px;
+}
+
+.centered{
+    position: relative;
+    width: 80%;
+    left: 10%;
+}
+
+#modelBox{
+    width: calc(100% - 150px);
+    height: 100%;
+    background-color: rgba(0,0,0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-left: 150px;    
+    display: none;
+}
+
+#frame{
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    overflow: hidden;
+}
+
+#row{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#row::-webkit-scrollbar{
+    display: none;
+}
+
+#row img{
+    width: 162px;
+}
+
+.social{
+    width: 8vh;
+    height: 8vh;
+    background-color: white;
+    color: #000;
+    border-radius: 50%;
+    margin: 4px;
+    text-align: center;
+    font-size: 3.5vh;
+    line-height: 6vh;
+
+}
+
+@media screen and (max-width:600px){
+    nav{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        height: auto;
+    }
+    #main{
+        position: relative;
+        margin: 0;
+        width: 100%;
+    }
+    nav .nav-items{
+        float: left;
+        padding:8px 14px;
+        width: 25%;
+    }
+
+    nav .nav-items i{
+        font-size: 22px;
+    }
+
+    nav .nav-items span{
+        display: none;
+    }
+    #caption h1{
+        font-size: 48px;
+    }
+    #modelBox{
+        width: 100%;
+        margin-left: 0;
+        z-index: 10;
+    }
+    #frame{
+        width: 80%;
+        left: 10%;
+    }
+}
